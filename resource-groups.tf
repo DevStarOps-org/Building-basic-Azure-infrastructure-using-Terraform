@@ -1,8 +1,13 @@
 
-data "azurerm_resource_group" "demo" {
-  name     = var.resource_group_name
+resource "azurerm_resource_group" "main" {
+  name     = "demo4-${var.environment_name}-rg"
+  location = var.deploy_region
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
-output "demo_resource_group" {
-  value = data.azurerm_resource_group.demo.name
+output "main_resource_group" {
+  value = azurerm_resource_group.main.name
 }
