@@ -1,3 +1,3 @@
 cd ..
-terraform apply -auto-approve %* "envs/shared.tfplan"
+terraform apply -auto-approve %* "envs/local.tfplan"
 cd scripts
