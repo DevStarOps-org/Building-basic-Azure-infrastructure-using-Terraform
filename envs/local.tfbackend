@@ -1,4 +1,4 @@
 resource_group_name   = "demo4-shared-rg"
 storage_account_name  = "demo4dso"
 container_name        = "tfstate"
-key                   = "shared.tfstate"
+key                   = "local.tfstate"
